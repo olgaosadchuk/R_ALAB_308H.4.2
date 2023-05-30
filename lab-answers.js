@@ -254,3 +254,15 @@ thomsOutfits.forEach((outfit, index) => {
 for (let i = 0; i <kristynsCloset.length; i++ ){
   console.log("WHIRR: Now washing " + kristynsCloset[i]);
 }
+
+
+//////////Inventory//////////////////////////////////////////////////////////////////////////////////////////////
+//Thom wants to do inventory on his closet. Using bracket notation, log the arrays containing all of Thom's shirts, pants, and accessories.
+console.log("Thom's shirts:");
+console.log(thomsCloset[0]);
+
+console.log("Thom's pants:");
+console.log(thomsCloset[1]);
+
+console.log("Thom's accessories:");
+console.log(thomsCloset[2]);
