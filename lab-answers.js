@@ -209,3 +209,41 @@ thomsCloset[2].push(kristynsShoe); // Add Kristyn's shoe to Thom's accessories a
 console.log(kristynsCloset); // Remaining items in Kristyn's closet
 console.log(thomsCloset); // Updated Thom's closet with Kristyn's shoe added
 
+
+////////Dress Us Up//////////////////////////////////////////////////////////
+// Function to randomly select an item from an array
+function getRandomItem(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+
+const kristynsOutfits = [];
+for (let i = 0; i < 3; i++) {
+  const outfit = {
+    shoe: getRandomItem(kristynsCloset),
+    top: getRandomItem(kristynsCloset),
+    bottom: getRandomItem(kristynsCloset),
+    accessory: getRandomItem(kristynsCloset)
+  };
+  kristynsOutfits.push(outfit);
+}
+
+const thomsOutfits = [];
+for (let i = 0; i < 3; i++) {
+  const outfit = {
+    shirt: getRandomItem(thomsCloset[0]),
+    pants: getRandomItem(thomsCloset[1]),
+    accessory: getRandomItem(thomsCloset[2])
+  };
+  thomsOutfits.push(outfit);
+}
+
+console.log("Kristyn will be wearing:");
+kristynsOutfits.forEach((outfit, index) => {
+  console.log(`Outfit ${index + 1}: ${outfit.shoe}, ${outfit.top}, ${outfit.bottom}, ${outfit.accessory}`);
+});
+
+console.log("Thom will be wearing:");
+thomsOutfits.forEach((outfit, index) => {
+  console.log(`Outfit ${index + 1}: ${outfit.shirt}, ${outfit.pants}, ${outfit.accessory}`);
+});
