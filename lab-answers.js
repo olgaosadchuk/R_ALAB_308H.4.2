@@ -107,3 +107,18 @@ console.log('Index of "Fast and Furious":', favMovies.indexOf('Fast and Furious'
 //Even though the favMovies array was declared with const, we were able to modify the array itself because const only guarantees 
 //that the binding (the variable) does not change. However, the content of the array can be altered.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////
+//Where is Waldo
+/////////////////////////////////////////////////////
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                      ["Lucinda", "Jacc", "Neff", "Snoop"],
+                      ["Petunia", ["Baked Goods", "Waldo"]]];
+
+whereIsWaldo.splice(1, 1);  //Remove Eggbert
+console.log(whereIsWaldo);  
+whereIsWaldo[1][2] = "No One"; // Change "Neff" to "No One"
+console.log(whereIsWaldo);
+console.log(whereIsWaldo[2][1][1]);  //Access and console.log "Waldo"
