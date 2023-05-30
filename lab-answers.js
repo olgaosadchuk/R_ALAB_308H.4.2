@@ -6,7 +6,6 @@ for (let i = 1; i <= 20; i++){
 }
 
 
-
 ////////////////////////////////
 // Get Even
 ////////////////////////////////
@@ -31,7 +30,6 @@ for (let i = 1; i <= 100; i++) {
       console.log(i);
     }
   }
-
 
 
 /////////////////////////////////
@@ -64,3 +62,48 @@ for (let i = 0, j = 0; i < turtles.length; i++, j++){
 turtlesUpperCase[j] = turtles[i].toUpperCase();
 }
 console.log(turtlesUpperCase);
+
+
+
+/////////////////////////////////////////////////////////////////////
+//Methods, Revisited
+///////////////////////////////////////////////////////////////////////
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+console.log(favMovies.indexOf('Titanic')); 
+
+favMovies.sort(); //Sort array in alphabetical order. It permanently altered the array by rearranging its elements.
+
+favMovies.pop();
+
+favMovies.push('Guardians of the Galaxy');
+
+favMovies.reverse();
+
+favMovies.shift();
+
+favMovies.unshift();  //The unshift() method in JavaScript returns the new length of the modified array. It represents the updated number of elements in the array after adding elements to the beginning.
+
+// Splice "Django Unchained" and add "Avatar".    It permanently altered the array.
+const djangoIndex = favMovies.indexOf('Django Unchained');
+favMovies.splice(djangoIndex, 1, 'Avatar');
+
+// Slice the last half of the array. Method sliced the array from the middle index to the end, creating a new array containing the second half of the original array.
+//No, the slice() method in JavaScript does not permanently alter the array. 
+//The slice() method returns a new array that contains a shallow copy of a portion of the original array based on the specified start and end indices. The original array remains unchanged.
+const middleIndex = Math.floor(favMovies.length / 2);
+const slicedArray = favMovies.slice(middleIndex);
+
+// Store the value of the slice in a variable and console.log it
+console.log('Sliced array:', slicedArray);
+
+// Console.log the final results
+console.log('Final results:', favMovies);
+
+// Console.log the index of "Fast and Furious"
+console.log('Index of "Fast and Furious":', favMovies.indexOf('Fast and Furious'));
+
+//The index of "Fast and Furious" is logged, and since it was removed from the array, the index is -1.
+//Even though the favMovies array was declared with const, we were able to modify the array itself because const only guarantees 
+//that the binding (the variable) does not change. However, the content of the array can be altered.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
