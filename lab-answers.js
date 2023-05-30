@@ -141,3 +141,24 @@ for (let i = 1; i <= 20; i++){
     console.log("Love me, pet me! HSSSSSS!");
   }
 }
+
+
+
+
+////////////////////////////////////////////////////////////
+//Find the Median
+///////////////////////////////////////////////////////////
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+//Sort the array in ascending order
+const sortedNums = nums.sort((a, b) => a - b);
+//Determine the middle index
+const middleIndexx = Math.floor(sortedNums.length / 2);
+//Find the median
+let median;
+if (sortedNums.length % 2 === 1) {
+  median = sortedNums[middleIndexx];
+} else {
+  median = (sortedNums[middleIndexx - 1] + sortedNums[middleIndexx]) / 2;
+}
+// Log the median number
+console.log(median);
