@@ -162,3 +162,50 @@ if (sortedNums.length % 2 === 1) {
 }
 // Log the median number
 console.log(median);
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//Hungry for More?
+/////////////////////////////////////////////////////////////////////////
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "Per Scholas hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
+
+//////////Alien Attire/////////////////////
+//Remove Kristyn's shoe from the array and save it to the variable kristynsShoe.
+//Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+const kristynsShoe = kristynsCloset.shift(); // Remove the first element (left shoe) and save it
+
+thomsCloset[2].push(kristynsShoe); // Add Kristyn's shoe to Thom's accessories array
+
+console.log(kristynsCloset); // Remaining items in Kristyn's closet
+console.log(thomsCloset); // Updated Thom's closet with Kristyn's shoe added
+
