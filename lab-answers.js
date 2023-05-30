@@ -53,3 +53,14 @@ console.log(sharky);
 console.log(plantee);
 console.log(porgee);
 console.log(dart);
+
+
+///////////////////////////////////////////////////////////////
+//Yell at the Ninja Turtles
+//////////////////////////////////////////////////////////////
+const turtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+let turtlesUpperCase = [];
+for (let i = 0, j = 0; i < turtles.length; i++, j++){
+turtlesUpperCase[j] = turtles[i].toUpperCase();
+}
+console.log(turtlesUpperCase);
