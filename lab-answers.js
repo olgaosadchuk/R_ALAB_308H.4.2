@@ -122,3 +122,22 @@ console.log(whereIsWaldo);
 whereIsWaldo[1][2] = "No One"; // Change "Neff" to "No One"
 console.log(whereIsWaldo);
 console.log(whereIsWaldo[2][1][1]);  //Access and console.log "Waldo"
+
+
+//////////////////////////////////////////////////////////////////////
+//Excited Kitten
+///////////////////////////////////////////////////////////////////////
+for (let i = 1; i <= 20; i++){
+  if (i % 2 === 0){
+    const randomIndex = Math.floor(Math.random() * 3);
+    const randomMessages = [
+    "...human... why you taking pictures of me...?", 
+    "...the catnip made me do it...",
+    "...why does the red dot always get away...?"
+  ]
+    console.log(randomMessages[randomIndex]);
+  }
+  else{
+    console.log("Love me, pet me! HSSSSSS!");
+  }
+}
