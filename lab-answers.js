@@ -247,3 +247,10 @@ console.log("Thom will be wearing:");
 thomsOutfits.forEach((outfit, index) => {
   console.log(`Outfit ${index + 1}: ${outfit.shirt}, ${outfit.pants}, ${outfit.accessory}`);
 });
+
+////////Dirty Laundry//////////////////////////////////////////////////////////////////////////////////////
+//Time to do laundry. Loop through Kristyn's closet and log the sentence "WHIRR: Now washing (item)" for each item in the array.
+
+for (let i = 0; i <kristynsCloset.length; i++ ){
+  console.log("WHIRR: Now washing " + kristynsCloset[i]);
+}
